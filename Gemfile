@@ -15,6 +15,9 @@ gem 'devise'
 # jQuery for Rails
 gem 'jquery-rails'
 
+# Generators
+gem 'rails3-generators'
+
 # Use unicorn as the web server
 gem 'unicorn'
 
