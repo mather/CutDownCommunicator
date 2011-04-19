@@ -43,5 +43,15 @@ module CutDownCommunicator
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+    # Mongoid Logger
+    config.mongoid.logger = Logger.new($stdout,:warn)
+    ## Generators
+    config.generators do |g|
+      g.template_engine :haml
+      g.test_framework :rspec, :fixture => true
+      g.fixture_replacement :factory_girl, :dir => "spec/factories"
+    end
+
   end
 end
