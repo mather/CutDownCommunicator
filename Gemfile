@@ -18,15 +18,18 @@ gem 'jquery-rails'
 # Use unicorn as the web server
 gem 'unicorn'
 
-
-# Bundle gems for the local environment. Make sure to
-# put test-only gems in this group so their generators
-# and rake tasks are available in development mode:
+# gems for testing
 group :development, :test do
+  # Unit Test
   gem 'rspec-rails'
   gem 'mongoid-rspec'
-  gem 'factory_girl'
+  gem 'factory_girl_rails'
+
+  # Acceptance Test
   gem 'steak'
   gem 'capybara'
   gem 'spork'
+
+  # Database Cleaner
+  gem 'database_cleaner'
 end
