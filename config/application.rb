@@ -53,5 +53,8 @@ module CutDownCommunicator
       g.fixture_replacement :factory_girl, :dir => "spec/factories"
     end
 
+    # Devise: do not logging password phrase
+    config.filter_parameters += [:password, :password_confirmation]
+
   end
 end
