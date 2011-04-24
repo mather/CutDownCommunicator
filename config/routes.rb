@@ -1,4 +1,11 @@
 CutDownCommunicator::Application.routes.draw do
+  root :to => "admin#index"
+
+
+  get "admin/index"
+
+  get "login/index"
+
   devise_for :users
 
   # The priority is based upon order of creation:
